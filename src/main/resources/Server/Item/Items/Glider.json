@@ -1,0 +1,117 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Glider.name"
+  },
+  "Icon": "Icons/ItemsGenerated/Glider.png",
+  "Model": "Items/Glider/Glider_Inhand.blockymodel",
+  "Texture": "Items/Glider/Feran_Glider_Texture.png",
+  "DroppedItemAnimation": "Items/Animations/Dropped/Dropped_Diagonal_Left.blockyanim",
+  "Quality": "Common",
+  "ItemLevel": 10,
+  "MaxStack": 1,
+  "Categories": [
+    "Items.Tools"
+  ],
+  "Glider": {
+    "FallSpeedMultiplier": 40,
+    "HorizontalSpeedMultiplier": 0.6,
+    "TerminalVelocity": -3,
+    "Speed": 16
+  },
+  "Interactions": {
+    "Primary": {
+      "RequireNewClick": true,
+      "Interactions": [
+        {
+          "Type": "StatsCondition",
+          "Costs": {
+            "Glider_Disabled": 1
+          },
+          "Next": {
+            "Type": "StatsCondition",
+            "Costs": {
+              "Stamina": 0.01
+            },
+            "Next": {
+              "Type": "EffectCondition",
+              "EntityEffectIds": [
+                "Stamina_Broken"
+              ],
+              "Match": "None",
+              "Next": {
+                "Type": "ToggleGlider"
+              }
+            }
+          },
+          "Failed": {
+            "Type": "ShinkuBannedMessage",
+            "Effects": {
+              "LocalSoundEventId": "SFX_Glider_Use_Fail"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "ItemAppearanceConditions": {
+    "GlidingActive": [
+      {
+        "Condition": [
+          1,
+          1
+        ],
+        "Model": "Items/Glider/Glider.blockymodel",
+        "Texture": "Items/Glider/Feran_Glider_Texture.png"
+      }
+    ]
+  },
+  "IconProperties": {
+    "Scale": 0.25,
+    "Rotation": [
+      315,
+      347,
+      195
+    ],
+    "Translation": [
+      11,
+      11
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Glider"
+    ]
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ingredient_Leather_Light",
+        "Quantity": 20
+      },
+      {
+        "ItemId": "Ingredient_Stick",
+        "Quantity": 20
+      },
+      {
+        "ItemId": "Ingredient_Fibre",
+        "Quantity": 20
+      },
+      {
+        "ItemId": "Ingredient_Feathers_Blue",
+        "Quantity": 3
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Id": "Workbench",
+        "Categories": [
+          "Workbench_Survival"
+        ],
+        "RequiredTierLevel": 1
+      }
+    ],
+    "TimeSeconds": 1
+  },
+  "Weapon": {},
+  "PlayerAnimationsId": "Glider"
+}

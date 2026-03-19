@@ -1,0 +1,33 @@
+{
+  "Max": 1,
+  "Shared": true,
+  "Regenerating": [
+    {
+      "Interval": 0.1,
+      "Amount": 1,
+      "RegenType": "Additive",
+      "ClampAtZero": true,
+      "Conditions": [
+        {
+          "Id": "ShinkuBannedWorld",
+          "Inverse": true
+        }
+      ]
+    },
+    {
+      "Interval": 0.1,
+      "Amount": -1,
+      "Conditions": [
+        {
+          "Id": "ShinkuBannedWorld",
+          "Inverse": false
+        }
+      ],
+      "RegenType": "Additive",
+      "ClampAtZero": true
+    }
+  ],
+  "Min": 0,
+  "InitialValue": 0,
+  "IgnoreInvulnerability": true
+}

@@ -1,0 +1,27 @@
+{
+  "Spawners": [
+    {
+      "SpawnerId": "Cosmos_Particles5",
+      "PositionOffset": {
+        "Z": 0.2
+      },
+      "MaxConcurrent": 1,
+      "LifeSpan": {
+        "Min": 0.5,
+        "Max": 0.5
+      }
+    },
+    {
+      "SpawnerId": "Cosmos_Particles6",
+      "PositionOffset": {
+        "Z": 0.2
+      },
+      "MaxConcurrent": 1,
+      "LifeSpan": {
+        "Max": 0.5,
+        "Min": 0.5
+      }
+    }
+  ],
+  "BoundingRadius": 10
+}

@@ -1,0 +1,254 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Riptide_Glider.name",
+    "Description": "server.items.Riptide_Glider.description"
+  },
+  "Icon": "Icons/ItemsGenerated/Riptide_Glider.png",
+  "Model": "Items/Glider/Glider_Inhand.blockymodel",
+  "Texture": "Items/Riptide_Glider.png",
+  "DroppedItemAnimation": "Items/Animations/Dropped/Dropped_Diagonal_Left.blockyanim",
+  "Quality": "Rare",
+  "ItemLevel": 10,
+  "MaxStack": 1,
+  "Categories": [
+    "Items.Tools"
+  ],
+  "Glider": {
+    "HorizontalSpeedMultiplier": 1,
+    "TerminalVelocity": -2.8,
+    "Speed": 20,
+    "FallSpeedMultiplier": 30
+  },
+  "Interactions": {
+    "Primary": {
+      "RequireNewClick": true,
+      "Interactions": [
+        {
+          "Type": "StatsCondition",
+          "Costs": {
+            "Glider_Disabled": 1
+          },
+          "Next": {
+            "Type": "StatsCondition",
+            "Costs": {
+              "Stamina": 0.01
+            },
+            "Next": {
+              "Type": "EffectCondition",
+              "EntityEffectIds": [
+                "Stamina_Broken"
+              ],
+              "Match": "None",
+              "Next": {
+                "Type": "ToggleGlider"
+              }
+            }
+          },
+          "Failed": {
+            "Type": "ShinkuBannedMessage",
+            "Effects": {
+              "LocalSoundEventId": "SFX_Glider_Use_Fail"
+            }
+          }
+        }
+      ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "StatsCondition",
+          "Costs": {
+            "Glider_Use_Essence": 1
+          },
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Ingredient_Water_Essence",
+              "Quantity": 1
+            },
+            "Next": {
+              "Type": "StatsCondition",
+              "Costs": {
+                "GlidingActive": 1
+              },
+              "Next": {
+                "Type": "ApplyForce",
+                "Direction": {
+                  "Z": -0.1
+                },
+                "AdjustVertical": true,
+                "WaitForGround": false,
+                "Force": 50,
+                "Next": {
+                  "Type": "ChangeStat",
+                  "StatModifiers": {
+                    "Stamina": -0.8
+                  }
+                },
+                "Effects": {
+                  "Particles": [
+                    {
+                      "TargetEntityPart": "Entity",
+                      "Scale": 3,
+                      "SystemId": "Riptide_Blow_Particles",
+                      "PositionOffset": {
+                        "Y": -0.8,
+                        "Z": 0
+                      },
+                      "DetachedFromModel": false,
+                      "RotationOffset": {
+                        "Pitch": -90
+                      }
+                    }
+                  ],
+                  "FirstPersonParticles": [],
+                  "WorldSoundEventId": "SFX_Bow_T2_Signature_Shoot"
+                },
+                "RunTime": 0,
+                "ChangeVelocityType": "Set",
+                "RaycastMode": "FollowMotion"
+              }
+            }
+          },
+          "Failed": {
+            "Type": "StatsCondition",
+            "Costs": {
+              "GlidingActive": 1
+            },
+            "Next": {
+              "Type": "ApplyForce",
+              "Direction": {
+                "Z": -0.1
+              },
+              "AdjustVertical": true,
+              "WaitForGround": false,
+              "Force": 50,
+              "Next": {
+                "Type": "ChangeStat",
+                "StatModifiers": {
+                  "Stamina": -0.8
+                }
+              },
+              "Effects": {
+                "Particles": [
+                  {
+                    "TargetEntityPart": "Entity",
+                    "Scale": 3,
+                    "SystemId": "Riptide_Blow_Particles",
+                    "PositionOffset": {
+                      "Y": -0.8,
+                      "Z": 0
+                    },
+                    "DetachedFromModel": false,
+                    "RotationOffset": {
+                      "Pitch": -90
+                    }
+                  }
+                ],
+                "FirstPersonParticles": [],
+                "WorldSoundEventId": "SFX_Bow_T2_Signature_Shoot"
+              },
+              "RunTime": 0,
+              "ChangeVelocityType": "Set",
+              "RaycastMode": "FollowMotion"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "ItemAppearanceConditions": {
+    "GlidingActive": [
+      {
+        "Condition": [
+          1,
+          1
+        ],
+        "Model": "Items/Glider.blockymodel",
+        "Texture": "Items/Riptide_Glider.png",
+        "Particles": [
+          {
+            "SystemId": "Water_Bubble_Stream",
+            "Scale": 1.5,
+            "PositionOffset": {
+              "Z": 0.5,
+              "X": -0.2
+            },
+            "TargetEntityPart": "Self",
+            "RotationOffset": {
+              "Roll": 80
+            }
+          },
+          {
+            "SystemId": "Water_Bubble_Stream",
+            "Scale": 1.5,
+            "PositionOffset": {
+              "Z": 0.1,
+              "Y": 1.2,
+              "X": 0.5
+            },
+            "TargetEntityPart": "Self",
+            "RotationOffset": {
+              "Roll": 50
+            }
+          }
+        ],
+        "FirstPersonParticles": [
+          {
+            "SystemId": "Magma_Blow_Particles",
+            "Scale": 0.01
+          }
+        ]
+      }
+    ]
+  },
+  "IconProperties": {
+    "Scale": 0.25,
+    "Rotation": [
+      315,
+      347,
+      195
+    ],
+    "Translation": [
+      11,
+      11
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Glider"
+    ]
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Glider",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Ingredient_Fabric_Scrap_Linen",
+        "Quantity": 20
+      },
+      {
+        "ItemId": "Ingredient_Water_Essence",
+        "Quantity": 20
+      },
+      {
+        "ItemId": "Ingredient_Feathers_Blue",
+        "Quantity": 3
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Id": "Workbench",
+        "RequiredTierLevel": 2,
+        "Categories": [
+          "Workbench_Survival"
+        ]
+      }
+    ],
+    "TimeSeconds": 1
+  },
+  "Weapon": {},
+  "PlayerAnimationsId": "Glider"
+}

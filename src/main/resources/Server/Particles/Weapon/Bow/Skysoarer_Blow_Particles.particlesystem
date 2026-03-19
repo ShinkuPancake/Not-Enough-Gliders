@@ -1,0 +1,8 @@
+{
+  "Spawners": [
+    {
+      "SpawnerId": "Skysoarer_Blow_Particles"
+    }
+  ],
+  "LifeSpan": 1
+}

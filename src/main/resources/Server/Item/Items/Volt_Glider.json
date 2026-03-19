@@ -1,0 +1,279 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Volt_Glider.name",
+    "Description": "server.items.Volt_Glider.description"
+  },
+  "Icon": "Icons/ItemsGenerated/Volt_Glider.png",
+  "Model": "Items/Glider_InhandGlow.blockymodel",
+  "Texture": "Items/Volt_Glider_Texture.png",
+  "DroppedItemAnimation": "Items/Animations/Dropped/Dropped_Diagonal_Left.blockyanim",
+  "Quality": "Rare",
+  "ItemLevel": 10,
+  "MaxStack": 1,
+  "Categories": [
+    "Items.Tools"
+  ],
+  "Glider": {
+    "FallSpeedMultiplier": 30,
+    "HorizontalSpeedMultiplier": 1,
+    "TerminalVelocity": -2.5,
+    "Speed": 20
+  },
+  "Interactions": {
+    "Primary": {
+      "RequireNewClick": true,
+      "Interactions": [
+        {
+          "Type": "StatsCondition",
+          "Costs": {
+            "Glider_Disabled": 1
+          },
+          "Next": {
+            "Type": "StatsCondition",
+            "Costs": {
+              "Stamina": 0.01
+            },
+            "Next": {
+              "Type": "EffectCondition",
+              "EntityEffectIds": [
+                "Stamina_Broken"
+              ],
+              "Match": "None",
+              "Next": {
+                "Type": "ToggleGlider"
+              }
+            }
+          },
+          "Failed": {
+            "Type": "ShinkuBannedMessage",
+            "Effects": {
+              "LocalSoundEventId": "SFX_Glider_Use_Fail"
+            }
+          }
+        }
+      ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "StatsCondition",
+          "Costs": {
+            "Glider_Use_Essence": 1
+          },
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Ingredient_Lightning_Essence",
+              "Quantity": 1
+            },
+            "Next": {
+              "Type": "StatsCondition",
+              "Costs": {
+                "GlidingActive": 1
+              },
+              "Next": {
+                "Type": "ApplyForce",
+                "Direction": {
+                  "X": 0,
+                  "Z": -0.3,
+                  "Y": 0.5
+                },
+                "AdjustVertical": false,
+                "WaitForGround": false,
+                "Next": {
+                  "Type": "ChangeStat",
+                  "StatModifiers": {
+                    "Stamina": 2.5
+                  }
+                },
+                "Effects": {
+                  "Particles": [
+                    {
+                      "TargetEntityPart": "Entity",
+                      "Scale": 2,
+                      "SystemId": "Lightning",
+                      "PositionOffset": {},
+                      "DetachedFromModel": true,
+                      "RotationOffset": {}
+                    },
+                    {
+                      "SystemId": "Impact_Mace_Charged",
+                      "Scale": 2,
+                      "TargetEntityPart": "Entity",
+                      "RotationOffset": {
+                        "Yaw": -90
+                      },
+                      "PositionOffset": {
+                        "Y": 1
+                      }
+                    }
+                  ],
+                  "FirstPersonParticles": [],
+                  "WorldSoundEventId": "SFX_Staff_Flame_Fireball_Impact"
+                },
+                "RunTime": 0,
+                "Force": 25
+              }
+            }
+          },
+          "Failed": {
+            "Type": "StatsCondition",
+            "Costs": {
+              "GlidingActive": 1
+            },
+            "Next": {
+              "Type": "ApplyForce",
+              "Direction": {
+                "X": 0,
+                "Z": -0.3,
+                "Y": 0.5
+              },
+              "AdjustVertical": false,
+              "WaitForGround": false,
+              "Next": {
+                "Type": "ChangeStat",
+                "StatModifiers": {
+                  "Stamina": 2.5
+                }
+              },
+              "Effects": {
+                "Particles": [
+                  {
+                    "TargetEntityPart": "Entity",
+                    "Scale": 2,
+                    "SystemId": "Lightning",
+                    "PositionOffset": {},
+                    "DetachedFromModel": true,
+                    "RotationOffset": {}
+                  },
+                  {
+                    "SystemId": "Impact_Mace_Charged",
+                    "Scale": 2,
+                    "TargetEntityPart": "Entity",
+                    "RotationOffset": {
+                      "Yaw": -90
+                    },
+                    "PositionOffset": {
+                      "Y": 1
+                    }
+                  }
+                ],
+                "FirstPersonParticles": [],
+                "WorldSoundEventId": "SFX_Staff_Flame_Fireball_Impact"
+              },
+              "RunTime": 0,
+              "Force": 25
+            }
+          }
+        }
+      ]
+    }
+  },
+  "ItemAppearanceConditions": {
+    "GlidingActive": [
+      {
+        "Condition": [
+          1,
+          1
+        ],
+        "Model": "Items/GliderGlow.blockymodel",
+        "Texture": "Items/Volt_Glider_Texture.png",
+        "Particles": [
+          {
+            "SystemId": "Volt_Particles",
+            "Scale": 1,
+            "PositionOffset": {
+              "X": -0.2,
+              "Z": 0.5
+            },
+            "RotationOffset": {
+              "Roll": 60
+            }
+          },
+          {
+            "SystemId": "Volt_Particles",
+            "Scale": 1,
+            "PositionOffset": {
+              "X": 0.5,
+              "Z": 0.1,
+              "Y": 1.2
+            },
+            "RotationOffset": {
+              "Roll": 60
+            }
+          }
+        ],
+        "ModelVFXId": "Volt_Glider_VFX",
+        "FirstPersonParticles": [
+          {
+            "SystemId": "Block_Break_Clay",
+            "Scale": 0.01
+          }
+        ],
+        "WorldSoundEventId": "SFX_Volt_Glider"
+      }
+    ]
+  },
+  "IconProperties": {
+    "Scale": 0.25,
+    "Rotation": [
+      315,
+      347,
+      195
+    ],
+    "Translation": [
+      11,
+      11
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Glider"
+    ]
+  },
+  "Light": {
+    "Color": "#a82",
+    "Radius": 4
+  },
+  "Weapon": {
+    "StatModifiers": {
+      "ReduceStaminaConsumption": [
+        {
+          "CalculationType": "Additive",
+          "Amount": 1
+        }
+      ]
+    }
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Glider",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Ingredient_Fabric_Scrap_Cindercloth",
+        "Quantity": 20
+      },
+      {
+        "ItemId": "Ingredient_Lightning_Essence",
+        "Quantity": 20
+      },
+      {
+        "ItemId": "Ingredient_Feathers_Light",
+        "Quantity": 3
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Id": "Workbench",
+        "RequiredTierLevel": 3,
+        "Categories": [
+          "Workbench_Survival"
+        ]
+      }
+    ],
+    "TimeSeconds": 1
+  },
+  "PlayerAnimationsId": "Glider"
+}

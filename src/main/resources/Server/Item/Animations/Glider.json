@@ -1,0 +1,15 @@
+{
+  "Parent": "Default",
+  "Animations": {
+    "GlideIdle": {
+      "FirstPerson": "Characters/Animations/Glide_Idle_FPS.blockyanim",
+      "Speed": 1,
+      "Looping": true
+    },
+    "Glide": {
+      "FirstPerson": "Characters/Animations/Glide_FPS.blockyanim",
+      "Speed": 1,
+      "Looping": true
+    }
+  }
+}

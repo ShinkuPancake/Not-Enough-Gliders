@@ -1,0 +1,13 @@
+{
+  "Max": 0,
+  "Min": 0,
+  "InitialValue": 0,
+  "Regenerating": [
+    {
+      "Interval": 0.1,
+      "Amount": 1,
+      "ClampAtZero": true,
+      "RegenType": "Additive"
+    }
+  ]
+}

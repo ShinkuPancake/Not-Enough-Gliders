@@ -1,0 +1,5 @@
+{
+  "Parent": "Glider_Elemental",
+  "Inherits": "Glider_Elemental",
+  "AnimationId": "GliderFireHurt"
+}

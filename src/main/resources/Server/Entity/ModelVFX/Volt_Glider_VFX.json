@@ -1,0 +1,25 @@
+{
+  "SwitchTo": "Transparency",
+  "PostColorOpacity": 0,
+  "NoiseScale": {
+    "X": 15,
+    "Y": 15
+  },
+  "AnimationDuration": 0.25,
+  "EffectDirection": "None",
+  "AnimationRange": {
+    "Y": 0.75,
+    "X": 0.3
+  },
+  "UseBloomOnHighlight": false,
+  "HighlightThickness": 2,
+  "HighlightColor": "#ffeec5",
+  "LoopOption": "Loop",
+  "NoiseScrollSpeed": {
+    "X": 0.1,
+    "Y": 0.1
+  },
+  "PostColor": "#a60000",
+  "UseProgessiveHighlight": false,
+  "CurveType": "Linear"
+}

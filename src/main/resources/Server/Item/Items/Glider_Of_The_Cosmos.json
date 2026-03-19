@@ -1,0 +1,240 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Glider_Of_The_Cosmos.name",
+    "Description": "server.items.Glider_Of_The_Cosmos.description"
+  },
+  "Icon": "Icons/ItemsGenerated/Glider_Of_The_Cosmos.png",
+  "Model": "Items/Glider_Inhand2Glow.blockymodel",
+  "Texture": "Items/Glider_Of_The_Cosmos_Texture.png",
+  "DroppedItemAnimation": "Items/Animations/Dropped/Dropped_Diagonal_Left.blockyanim",
+  "Quality": "Legendary",
+  "ItemLevel": 10,
+  "MaxStack": 1,
+  "Categories": [
+    "Items.Tools"
+  ],
+  "Glider": {
+    "FallSpeedMultiplier": 25,
+    "HorizontalSpeedMultiplier": 1,
+    "TerminalVelocity": -2.5,
+    "Speed": 30
+  },
+  "Interactions": {
+    "Primary": {
+      "RequireNewClick": true,
+      "Interactions": [
+        {
+          "Type": "StatsCondition",
+          "Costs": {
+            "Glider_Disabled": 1
+          },
+          "Next": {
+            "Type": "StatsCondition",
+            "Costs": {
+              "Stamina": 0.01
+            },
+            "Next": {
+              "Type": "EffectCondition",
+              "EntityEffectIds": [
+                "Stamina_Broken"
+              ],
+              "Match": "None",
+              "Next": {
+                "Type": "ToggleGlider",
+                "Effects": {},
+                "Next": {
+                  "Type": "StatsCondition",
+                  "Costs": {
+                    "GlidingActive": 1
+                  },
+                  "Next": {
+                    "Type": "Simple",
+                    "Effects": {
+                      "WorldSoundEventId": "SFX_Cosmos_Use2",
+                      "LocalSoundEventId": "SFX_Cosmos_Use"
+                    }
+                  },
+                  "LessThan": true
+                }
+              }
+            }
+          },
+          "Failed": {
+            "Type": "ShinkuBannedMessage",
+            "Effects": {
+              "LocalSoundEventId": "SFX_Glider_Use_Fail"
+            }
+          }
+        }
+      ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "StatsCondition",
+          "Costs": {
+            "GlidingActive": 1
+          },
+          "Next": {
+            "Type": "ApplyForce",
+            "Direction": {
+              "X": 0,
+              "Z": -0.5
+            },
+            "AdjustVertical": true,
+            "WaitForGround": false,
+            "Force": 60,
+            "Next": {
+              "Type": "ChangeStat",
+              "StatModifiers": {
+                "Stamina": -1
+              }
+            },
+            "Effects": {
+              "WorldSoundEventId": "SFX_Cosmos_Blow2",
+              "LocalSoundEventId": "SFX_Cosmos_Blow",
+              "Particles": [
+                {
+                  "SystemId": "Cosmos_Particles3",
+                  "Scale": 1,
+                  "TargetEntityPart": "Entity",
+                  "PositionOffset": {
+                    "Z": -3,
+                    "Y": 1.5
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "ItemAppearanceConditions": {
+    "GlidingActive": [
+      {
+        "Condition": [
+          1,
+          1
+        ],
+        "Model": "Items/Glider2Glow.blockymodel",
+        "Texture": "Items/Glider_Of_The_Cosmos_Texture.png",
+        "ModelVFXId": "Creative_Tool",
+        "Particles": [
+          {
+            "SystemId": "Cosmos_Particles2",
+            "TargetEntityPart": "Self",
+            "Scale": 2.5,
+            "PositionOffset": {
+              "Y": 0.6,
+              "Z": -0.17
+            },
+            "RotationOffset": {
+              "Pitch": -20
+            }
+          }
+        ],
+        "FirstPersonParticles": [
+          {
+            "SystemId": "Block_Break_Clay",
+            "Scale": 0.01
+          }
+        ]
+      },
+      {
+        "Particles": [
+          {
+            "SystemId": "Cinematic_Portal_Appear_L",
+            "Color": "#e430ff"
+          },
+          {
+            "SystemId": "Cosmos_Particles",
+            "Scale": 2
+          }
+        ],
+        "Condition": [
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  "IconProperties": {
+    "Scale": 0.25,
+    "Rotation": [
+      315,
+      347,
+      195
+    ],
+    "Translation": [
+      11,
+      11
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Glider"
+    ]
+  },
+  "Light": {
+    "Color": "#eaf",
+    "Radius": 4
+  },
+  "Weapon": {
+    "StatModifiers": {
+      "NoStaminaConsumption": [
+        {
+          "CalculationType": "Additive",
+          "Amount": 1
+        }
+      ]
+    }
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Glider",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Skysoarer_Glider",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Verdant_Glider",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Riptide_Glider",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Magma_Glider",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Glacial_Glider",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Volt_Glider",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Void_Glider"
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Id": "Workbench",
+        "RequiredTierLevel": 3,
+        "Categories": [
+          "Workbench_Survival"
+        ]
+      }
+    ],
+    "TimeSeconds": 1,
+    "KnowledgeRequired": false
+  },
+  "PlayerAnimationsId": "Glider"
+}

@@ -1,0 +1,32 @@
+{
+  "Max": 1,
+  "Shared": true,
+  "Regenerating": [
+    {
+      "Interval": 0.1,
+      "Amount": 1,
+      "RegenType": "Additive",
+      "ClampAtZero": true,
+      "Conditions": [
+        {
+          "Id": "ShinkuGliderConsumeEssence",
+          "Inverse": false
+        }
+      ]
+    },
+    {
+      "Interval": 0.1,
+      "Amount": -1,
+      "Conditions": [
+        {
+          "Id": "ShinkuGliderConsumeEssence",
+          "Inverse": true
+        }
+      ],
+      "RegenType": "Additive",
+      "ClampAtZero": true
+    }
+  ],
+  "Min": 0,
+  "InitialValue": 0
+}

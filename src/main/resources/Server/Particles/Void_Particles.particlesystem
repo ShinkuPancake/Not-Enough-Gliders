@@ -1,0 +1,29 @@
+{
+  "Spawners": [
+    {
+      "SpawnerId": "Void_Particles1",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "LifeSpan": {
+        "Max": 1
+      }
+    },
+    {
+      "SpawnerId": "Volt_Particles2",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "RotationOffset": {
+        "Pitch": 90
+      },
+      "LifeSpan": {
+        "Max": 1
+      }
+    }
+  ]
+}

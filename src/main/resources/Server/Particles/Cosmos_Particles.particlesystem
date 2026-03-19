@@ -1,0 +1,19 @@
+{
+  "Spawners": [
+    {
+      "SpawnerId": "Cosmos_Particles1",
+      "StartDelay": 0.1,
+      "PositionOffset": {
+        "Z": 0.2
+      }
+    },
+    {
+      "SpawnerId": "Cosmos_Particles2",
+      "StartDelay": 0.1,
+      "PositionOffset": {
+        "Z": 0.2
+      }
+    }
+  ],
+  "BoundingRadius": 10
+}

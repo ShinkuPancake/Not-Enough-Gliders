@@ -1,0 +1,50 @@
+{
+  "Spawners": [
+    {
+      "SpawnerId": "Water_Splash",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      }
+    },
+    {
+      "SpawnerId": "Riptide_Blow_Particles",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "RotationOffset": {
+        "Yaw": 90
+      },
+      "FixedRotation": false
+    },
+    {
+      "SpawnerId": "Riptide_Blow_Particles",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "RotationOffset": {
+        "Yaw": 90
+      },
+      "FixedRotation": false,
+      "StartDelay": 0.15
+    },
+    {
+      "SpawnerId": "Riptide_Blow_Particles",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "RotationOffset": {
+        "Yaw": 90
+      },
+      "FixedRotation": false,
+      "StartDelay": 0.3
+    }
+  ]
+}

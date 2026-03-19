@@ -1,0 +1,19 @@
+# Block the giants
+*.jar
+libs/
+build/
+bin/
+out/
+.gradle/
+UserData/
+*.aot
+
+# Keep only the tiny wrapper
+!gradle/wrapper/gradle-wrapper.jar
+
+# IDE Junk
+.idea/
+.vscode/
+*.iml
+.kotlin/
+.DS_Store

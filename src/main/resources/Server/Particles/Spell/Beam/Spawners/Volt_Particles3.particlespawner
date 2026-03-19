@@ -1,0 +1,123 @@
+{
+  "RenderMode": "Erosion",
+  "EmitOffset": {
+    "X": {
+      "Min": 0,
+      "Max": 0
+    },
+    "Y": {
+      "Min": 0,
+      "Max": 0
+    },
+    "Z": {
+      "Min": 0,
+      "Max": 0
+    }
+  },
+  "ParticleRotationInfluence": "BillboardVelocity",
+  "LinearFiltering": true,
+  "LightInfluence": 0,
+  "MaxConcurrentParticles": 10,
+  "ParticleLifeSpan": {
+    "Min": 0.25,
+    "Max": 0.7833333333333333
+  },
+  "ParticleRotateWithSpawner": false,
+  "TrailSpawnerPositionMultiplier": 1,
+  "TrailSpawnerRotationMultiplier": 1,
+  "SpawnRate": {
+    "Min": 50,
+    "Max": 50
+  },
+  "InitialVelocity": {
+    "Speed": {
+      "Min": 18,
+      "Max": 30
+    },
+    "Yaw": {
+      "Min": 150,
+      "Max": 210
+    },
+    "Pitch": {
+      "Min": 90,
+      "Max": 90
+    }
+  },
+  "Particle": {
+    "Texture": "Particles/Textures/Shapes/Lightning.png",
+    "FrameSize": {
+      "Width": 64,
+      "Height": 124
+    },
+    "UVOption": "RandomFlipU",
+    "Animation": {
+      "0": {
+        "FrameIndex": {
+          "Min": 0,
+          "Max": 0
+        },
+        "Scale": {
+          "X": {
+            "Min": 1,
+            "Max": 1
+          },
+          "Y": {
+            "Min": 1,
+            "Max": 1
+          }
+        },
+        "Rotation": {
+          "X": {
+            "Min": 0,
+            "Max": 0
+          },
+          "Y": {
+            "Min": 0,
+            "Max": 0
+          },
+          "Z": {
+            "Min": 0,
+            "Max": 0
+          }
+        },
+        "Opacity": 0
+      },
+      "2": {
+        "Opacity": 0.76
+      },
+      "4": {
+        "FrameIndex": {
+          "Min": 1,
+          "Max": 1
+        }
+      },
+      "6": {
+        "FrameIndex": {
+          "Min": 2,
+          "Max": 2
+        }
+      },
+      "8": {
+        "Opacity": 0.6,
+        "Color": "#ffa55c"
+      },
+      "10": {
+        "Opacity": 0
+      }
+    },
+    "InitialAnimationFrame": {
+      "Opacity": 1,
+      "Scale": {
+        "X": {
+          "Min": 0.25,
+          "Max": 0.75
+        },
+        "Y": {
+          "Min": 20,
+          "Max": 20
+        }
+      },
+      "Color": "#ffebb2"
+    }
+  }
+}

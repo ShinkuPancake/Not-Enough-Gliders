@@ -1,0 +1,1 @@
+Source code for Not Enough Gliders mod in Hytale, the java side mostly handles glider configs while the asset side handles the glider logic, will not be updated frequently as this is posted only for the curseforge hytale modding contest 

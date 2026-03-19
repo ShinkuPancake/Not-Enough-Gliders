@@ -1,0 +1,12 @@
+{
+  "Duration": 1,
+  "ApplicationEffects": {
+    "AbilityEffects": {
+      "Disabled": [
+        "Primary",
+        "Use"
+      ]
+    }
+  },
+  "OverlapBehavior": "Overwrite"
+}

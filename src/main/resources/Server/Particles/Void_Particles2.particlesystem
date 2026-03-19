@@ -1,0 +1,24 @@
+{
+  "Spawners": [
+    {
+      "SpawnerId": "MagicPortal_VoidSpawn"
+    },
+    {
+      "SpawnerId": "MagicPortal_VoidFlash"
+    },
+    {
+      "SpawnerId": "MagicPortal_VoidSparks",
+      "PositionOffset": {
+        "Y": 0
+      }
+    },
+    {
+      "SpawnerId": "MagicPortal_VoidSparksDark",
+      "PositionOffset": {
+        "Y": 0
+      }
+    }
+  ],
+  "CullDistance": 50.0,
+  "IsImportant": true
+}

@@ -1,0 +1,18 @@
+{
+  "Spawners": [
+    {
+      "SpawnerId": "Void_Glider_Particles1",
+      "PositionOffset": {
+        "Y": 0
+      }
+    },
+    {
+      "SpawnerId": "Void_Glider_Particles2",
+      "PositionOffset": {
+        "Y": 0
+      }
+    }
+  ],
+  "CullDistance": 50.0,
+  "IsImportant": true
+}

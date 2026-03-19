@@ -1,0 +1,14 @@
+{
+  "Spawners": [
+    {
+      "SpawnerId": "Volt_Particles1"
+    },
+    {
+      "SpawnerId": "Volt_Particles2"
+    },
+    {
+      "SpawnerId": "Volt_Particles3"
+    }
+  ],
+  "CullDistance": 30.0
+}

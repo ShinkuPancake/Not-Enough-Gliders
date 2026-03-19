@@ -1,0 +1,18 @@
+{
+  "Group": "com.shinku",
+  "Name": "NotEnoughGliders",
+  "Version": "1.5.0",
+  "Description": "This mod adds several custom gliders with unique mechanics to help you traverse the world of Orbis.",
+  "Authors": [
+    {
+      "Name": "Shinku"
+    }
+  ],
+  "Website": "",
+  "ServerVersion": "2026.02.19-1a311a592",
+  "Dependencies": {},
+  "OptionalDependencies": {},
+  "DisabledByDefault": false,
+  "Main": "com.shinku.NotEnoughGliders",
+  "IncludesAssetPack": true
+}   
