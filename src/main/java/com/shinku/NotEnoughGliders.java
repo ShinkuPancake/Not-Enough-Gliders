@@ -5,7 +5,7 @@ import java.util.Map;
 import javax.annotation.Nonnull;
 
 import com.hypixel.hytale.builtin.crafting.BenchRecipeRegistry;
-import com.hypixel.hytale.server.core.modules.entitystats.asset.condition.Condition;
+import com.hypixel.hytale.server.core.modules.entity.condition.Condition;
 import com.hypixel.hytale.server.core.modules.interaction.interaction.config.Interaction; 
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;

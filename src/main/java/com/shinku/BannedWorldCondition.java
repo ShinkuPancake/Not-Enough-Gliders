@@ -2,12 +2,13 @@ package com.shinku;
 
 import java.time.Instant;
 import java.util.Arrays;
+
 import javax.annotation.Nonnull;
 
 import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.component.ComponentAccessor;
 import com.hypixel.hytale.component.Ref;
-import com.hypixel.hytale.server.core.modules.entitystats.asset.condition.Condition;
+import com.hypixel.hytale.server.core.modules.entity.condition.Condition;
 import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
@@ -33,7 +34,6 @@ public class BannedWorldCondition extends Condition {
 
         String worldName = currentWorld.getName().toLowerCase();
         
-        // This only runs on the Server, so NotEnoughGliders.CONFIG is safe!
         String[] disabledList = NotEnoughGliders.CONFIG.get().disabledInstances;
 
         if (disabledList != null && disabledList.length > 0) {

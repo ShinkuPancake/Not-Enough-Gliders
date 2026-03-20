@@ -38,14 +38,14 @@
     {
       "$Comment": "Player in creative mode",
       "Interval": 0.5,
-      "Amount": 1,
+      "Amount": 1.0,
       "RegenType": "Percentage",
       "Conditions": [
         {
           "Id": "Alive"
         },
         {
-          "Id": "Player",
+          "Id": "CheckPlayerGameMode",
           "GameMode": "Creative"
         }
       ]
